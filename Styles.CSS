@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(94, 55, 10);
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+.logo {
+    display: flex;
+    margin-left: 30px;
+    gap: 10px;
+    align-items: center;
+    padding:5px;
+} 
+.logo__h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    position: relative;
+    top: 2px;
+}
+.logo img {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: -2px;
+    left: 0;
+}
+nav img {
+    height: 40px;
+    width: 40px;
+}
+nav {
+    margin-right: 15px;
+    padding-bottom:5px;
+    padding-top: 5px;
+}
+body {
+    background: rgb(255, 230, 184);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none;
+}
+.imagencontenedor {
+    margin: 200px auto;
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+}
+.imagencontenedor .imagen {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+}
+.imagencontenedor  .imagen img {
+    width: 120px;
+    height: 145px;
+    transition-duration: .1s;
+    
+    
+}
+.nombre {
+    background-color: black;
+    border-radius: .2cm;
+    color: white;
+    margin-top: 6px;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    padding: 8px 5px; 
+    left: -35PX;
+}
+.imagencontenedor .imagen:hover img {
+    transform: rotate(8deg);
+
+}
+.imagencontenedor .imagen:hover .nombre {
+    display: inline-flex;
+    position: absolute;
+    top: -65px;
+    justify-content: center;
+}
+
+.nombre::before {
+    content: "";
+    position: absolute;
+    border-top: 10px solid black;
+    border-right: solid 10px transparent;
+    border-left: 10px solid transparent;
+    bottom: -10px;
+}
+@media (max-width:660px) {
+    .imagencontenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 90px;
+        width: 150px;
+        margin-top: 90px;
+    }
+    .logo h2 {
+        font-size: 44px;
+        padding: 5px;
+    }
+    .logo img {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        top: -5px;
+    }
+    nav img {
+        height: 55px;
+        width: 55px;
+    }
+    .nombre {
+        font-size: 24px;
+    }
+}
